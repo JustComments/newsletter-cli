@@ -1,6 +1,8 @@
 import * as aws from "aws-sdk";
 import { SendResult } from "./SendResult";
 
+process.env.AWS_SDK_LOAD_CONFIG = "1";
+
 export class SesTransport {
   private ses: aws.SES;
 
