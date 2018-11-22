@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`send an email successfully 1`] = `
+Object {
+  "html": "test",
+  "name": "newsletterCli-test",
+  "subject": "test",
+  "text": "test",
+}
+`;
+
+exports[`send an email successfully 2`] = `"a@b.com"`;
+
+exports[`send an email successfully 3`] = `
+Array [
+  Recipient {
+    "email": "a@b.com",
+  },
+]
+`;
+
+exports[`send an email successfully 4`] = `"newsletterCli-test"`;
+
+exports[`send an email successfully 5`] = `1`;
+
+exports[`send an email successfully 6`] = `0`;
+
+exports[`send an email unsuccessfully 1`] = `
+Object {
+  "html": "test",
+  "name": "newsletterCli-test",
+  "subject": "test",
+  "text": "test",
+}
+`;
+
+exports[`send an email unsuccessfully 2`] = `"a@b.com"`;
+
+exports[`send an email unsuccessfully 3`] = `
+Array [
+  Recipient {
+    "email": "a@b.com",
+  },
+]
+`;
+
+exports[`send an email unsuccessfully 4`] = `"newsletterCli-test"`;
+
+exports[`send an email unsuccessfully 5`] = `1`;
+
+exports[`send an email unsuccessfully 6`] = `1`;
+
+exports[`send many emails 1`] = `
+Object {
+  "html": "test",
+  "name": "newsletterCli-test",
+  "subject": "test",
+  "text": "test",
+}
+`;
+
+exports[`send many emails 2`] = `"a@b.com"`;
+
+exports[`send many emails 3`] = `
+Array [
+  Recipient {
+    "email": "0@test.com",
+  },
+  Recipient {
+    "email": "1@test.com",
+  },
+  Recipient {
+    "email": "2@test.com",
+  },
+  Recipient {
+    "email": "3@test.com",
+  },
+  Recipient {
+    "email": "4@test.com",
+  },
+  Recipient {
+    "email": "5@test.com",
+  },
+  Recipient {
+    "email": "6@test.com",
+  },
+  Recipient {
+    "email": "7@test.com",
+  },
+  Recipient {
+    "email": "8@test.com",
+  },
+  Recipient {
+    "email": "9@test.com",
+  },
+]
+`;
+
+exports[`send many emails 4`] = `"newsletterCli-test"`;
+
+exports[`send many emails 5`] = `10`;
+
+exports[`send many emails 6`] = `"a@b.com"`;
+
+exports[`send many emails 7`] = `
+Array [
+  Recipient {
+    "email": "10@test.com",
+  },
+]
+`;
+
+exports[`send many emails 8`] = `"newsletterCli-test"`;
+
+exports[`send many emails 9`] = `11`;
+
+exports[`send many emails 10`] = `0`;

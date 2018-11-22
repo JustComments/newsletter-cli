@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create Recipients from valid CSV 1`] = `1`;
+
+exports[`create Recipients from valid CSV 2`] = `2`;
+
+exports[`create Recipients from valid CSV 3`] = `1`;
+
+exports[`create Recipients from valid CSV 4`] = `1`;
