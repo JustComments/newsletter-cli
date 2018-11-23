@@ -1,6 +1,6 @@
 {
   "name": "newsletter-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Easy CLI to send newsletters from your machine",
   "bin": {
     "newsletter": "dist/index.js"
@@ -18,7 +18,12 @@
     "type": "git",
     "url": "git+https://github.com/orkon/newsletter-cli.git"
   },
-  "keywords": ["newsletter", "ses", "email", "bulk"],
+  "keywords": [
+    "newsletter",
+    "ses",
+    "email",
+    "bulk"
+  ],
   "author": "Oleksii Rudenko <alexei.rudenko@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -55,7 +60,10 @@
     "ora": "3.0.0",
     "remove-markdown": "0.3.0"
   },
-  "files": ["dist/index.js", "dist/lib"],
+  "files": [
+    "dist/index.js",
+    "dist/lib"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
