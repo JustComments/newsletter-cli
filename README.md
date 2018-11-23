@@ -26,6 +26,6 @@ Prepare your AWS SES account and configure access to AWS on your machine:
     The column named 'email' must be present in the file
 - `<from-email>` is the email address which will appear as the sender of the newsletter.
 
-##Get Help
+## Get Help
 
 [Open an issue](https://github.com/orkon/newsletter-cli/issues)
