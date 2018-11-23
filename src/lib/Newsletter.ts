@@ -36,10 +36,10 @@ export class Newsletter {
     fs.writeFileSync(
       this.filePath,
       `---
-subject: Define your subject here
+subject: Subject of your awesome newsletter!
 ---
 
-Write your newsletter in Markdown here
+Here goes the text of your awesome newsletter!
 `,
       "utf8",
     );
