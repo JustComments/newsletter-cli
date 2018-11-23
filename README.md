@@ -3,7 +3,7 @@
   <a href="https://www.npmjs.org/package/newsletter-cli"><img src="https://img.shields.io/npm/v/newsletter-cli.svg?style=flat" alt="npm"></a>
 </h1>
 <p align="center">
-  <img src="demo.svg?raw=true" width="572" alt="newsletter cli demo">
+  <img src="https://raw.githubusercontent.com/OrKoN/newsletter-cli/master/demo.svg" width="572" alt="newsletter cli demo">
 </p>
 
 *Write newsletters in Markdown and send to many recipients from your machine using AWS SES.*
