@@ -1,12 +1,7 @@
 import * as fm from "front-matter";
 import * as fs from "fs";
 import * as marked from "marked";
-
 import rmm = require("remove-markdown");
-
-interface IFrontMatterAttributes {
-  subject: string;
-}
 
 export class Newsletter {
   private name: string;
@@ -72,4 +67,8 @@ Write your newsletter in Markdown here
     }
     return name;
   }
+}
+
+interface IFrontMatterAttributes {
+  subject: string;
 }
