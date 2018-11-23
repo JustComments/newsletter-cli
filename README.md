@@ -1,4 +1,7 @@
-# newsletter-cli
+<h1 align="center">
+  newsletter-cli
+  <a href="https://www.npmjs.org/package/newsletter-cli"><img src="https://img.shields.io/npm/v/newsletter-cli.svg?style=flat" alt="npm"></a>
+</h1>
 
 *Write newsletters in Markdown and send to many recipients from your machine using AWS SES.*
 
