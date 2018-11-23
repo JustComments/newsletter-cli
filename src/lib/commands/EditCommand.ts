@@ -1,6 +1,6 @@
+import chalk from "chalk";
 import opn = require("opn");
 import { ExistingNewsLetterCommand } from "./ExistingNewsletterCommand";
-import chalk from "chalk";
 
 export class EditCommand extends ExistingNewsLetterCommand {
   public async run() {
