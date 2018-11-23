@@ -6,7 +6,7 @@
   <img src="https://raw.githubusercontent.com/OrKoN/newsletter-cli/master/demo.svg?sanitize=true" width="572" alt="newsletter cli demo">
 </p>
 <p align="center">
-*Write newsletters in **Markdown** and send to many recipients from your machine using **AWS SES**.*
+  Write newsletters in <strong>Markdown</strong> and send to many recipients from your machine using <strong>AWS SES</strong>.
 </p>
 
 ## Prerequisites
