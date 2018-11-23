@@ -38,18 +38,20 @@ export class SendCommand extends ExistingNewsLetterCommand {
       );
       spinner.stop();
       if (result.failedCount() === 0) {
-        console.log(chalk.green(`Successfully sent ${result.count()} emails`));
+        console.log(
+          chalk.green(`= Successfully sent ${result.count()} emails`),
+        );
       } else {
         console.log(
-          chalk.green(
-            `${result.failedCount()} emails have not been sent due to errors`,
+          chalk.red(
+            `= ${result.failedCount()} emails have not been sent due to errors`,
           ),
         );
 
         for (const { recipient, status } of result.failed()) {
           console.log(
             chalk.red(
-              `${recipient.getEmail()} ${status.status} ${status.error}`,
+              `= ${recipient.getEmail()} ${status.status} ${status.error}`,
             ),
           );
         }
