@@ -11,6 +11,10 @@ Prepare your AWS SES account and configure access to AWS on your machine:
 
 ## Getting Started
 
+```sh
+npm i newsletter-cli -g
+```
+
 - Step 1: Run `newsletter prepare` to get started. Follow the command's instructions.
 - Step 2: Run `newsletter edit <newsletter-name>` to open the prepared markdown file for the newsletter using an editor. Write your newsletter!
 - Step 3: Run `newsletter preview <newsletter-name>` to preview the resulting HTML of your newsletter in a web-browser.
