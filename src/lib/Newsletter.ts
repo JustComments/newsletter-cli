@@ -1,8 +1,8 @@
 import * as fm from "front-matter";
 import * as fs from "fs";
+import juice = require("juice");
 import * as marked from "marked";
 import rmm = require("remove-markdown");
-import juice = require("juice");
 
 export class Newsletter {
   private name: string;
