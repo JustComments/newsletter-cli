@@ -13,9 +13,9 @@
 
 ✍️ **Markdown** for writing the content
 
-🌈 **Styling** with CSS which is automatically inlined
+🌈 **Styling** using CSS (automatically *inlined*)
 
-📨 **Send** using AWS SES and respecting rate limits
+📨 **Send** using AWS SES respecting rate limits
 
 ## Prerequisites
 
