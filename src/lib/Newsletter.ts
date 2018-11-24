@@ -2,6 +2,7 @@ import * as fm from "front-matter";
 import * as fs from "fs";
 import * as marked from "marked";
 import rmm = require("remove-markdown");
+import juice = require("juice");
 
 export class Newsletter {
   private name: string;
@@ -24,10 +25,20 @@ export class Newsletter {
   } {
     const markdown = fs.readFileSync(this.filePath, "utf8");
     const { body, attributes } = fm<IFrontMatterAttributes>(markdown);
-    const html = `<title>${attributes.subject}</title>` + marked(body);
+    const { subject, styles } = attributes;
+    const css = styles ? fs.readFileSync(styles, "utf8") : "";
+    const html = `<html>
+      <head>
+        <title>${subject}</title>
+        <style>${css}</style>
+      </head>
+      <body class="markdown-body">${marked(body)}
+      </body>
+    </html>`;
+    const inlinedHtml = juice(html);
     return {
-      html: html.trim(),
-      subject: attributes.subject.trim(),
+      html: inlinedHtml.trim(),
+      subject: subject.trim(),
       text: rmm(body).trim(),
     };
   }
@@ -37,6 +48,7 @@ export class Newsletter {
       this.filePath,
       `---
 subject: Subject of your awesome newsletter!
+styles: ${require.resolve("github-markdown-css")}
 ---
 
 Here goes the text of your awesome newsletter!
@@ -71,4 +83,5 @@ Here goes the text of your awesome newsletter!
 
 interface IFrontMatterAttributes {
   subject: string;
+  styles?: string;
 }

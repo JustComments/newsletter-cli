@@ -9,6 +9,14 @@
   Write newsletters in <strong>Markdown</strong> and send to many recipients from your machine using <strong>AWS SES</strong>.
 </p>
 
+## Features
+
+✍️ **Markdown** for writing the content
+
+🌈 **Styling** with CSS which is automatically inlined
+
+📨 **Send** using AWS SES and respecting rate limits
+
 ## Prerequisites
 
 Prepare your AWS SES account and configure access to AWS on your machine:

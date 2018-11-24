@@ -4,7 +4,7 @@
     "target": "ES2017",
     "outDir": "./dist",
     "moduleResolution": "node",
-    "lib": ["ES2015"],
+    "lib": ["ES2015", "dom"],
     "allowJs": true,
     "alwaysStrict": true,
     "strict": true,
