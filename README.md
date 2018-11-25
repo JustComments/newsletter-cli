@@ -59,6 +59,8 @@ Hi {{name}}!
 Here goes the text of your awesome newsletter!
 ```
 
+In the snippet above, the `name` column is required for all recipients in the CSV file.
+
 Unfortunately, if the template rendering fails, AWS SES does not return an error. To detect rendering errors, you will need to subscribe to an SNS topics as described [here](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html).
 
 The reasons why template rendering can fail:
