@@ -32,6 +32,7 @@
   "homepage": "https://github.com/orkon/newsletter-cli#readme",
   "devDependencies": {
     "@types/figlet": "1.2.0",
+    "@types/handlebars": "4.0.39",
     "@types/inquirer": "0.0.43",
     "@types/jest": "23.3.9",
     "@types/marked": "0.4.2",
@@ -54,6 +55,7 @@
     "figlet": "1.2.1",
     "front-matter": "3.0.1",
     "github-markdown-css": "2.10.0",
+    "handlebars": "4.0.12",
     "inquirer": "6.2.0",
     "isemail": "3.2.0",
     "juice": "5.0.1",

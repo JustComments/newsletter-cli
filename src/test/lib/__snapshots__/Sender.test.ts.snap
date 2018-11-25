@@ -14,7 +14,9 @@ exports[`send an email successfully 2`] = `"a@b.com"`;
 exports[`send an email successfully 3`] = `
 Array [
   Recipient {
-    "email": "a@b.com",
+    "raw": Object {
+      "email": "a@b.com",
+    },
   },
 ]
 `;
@@ -39,7 +41,9 @@ exports[`send an email unsuccessfully 2`] = `"a@b.com"`;
 exports[`send an email unsuccessfully 3`] = `
 Array [
   Recipient {
-    "email": "a@b.com",
+    "raw": Object {
+      "email": "a@b.com",
+    },
   },
 ]
 `;
@@ -64,34 +68,54 @@ exports[`send many emails 2`] = `"a@b.com"`;
 exports[`send many emails 3`] = `
 Array [
   Recipient {
-    "email": "0@test.com",
+    "raw": Object {
+      "email": "0@test.com",
+    },
   },
   Recipient {
-    "email": "1@test.com",
+    "raw": Object {
+      "email": "1@test.com",
+    },
   },
   Recipient {
-    "email": "2@test.com",
+    "raw": Object {
+      "email": "2@test.com",
+    },
   },
   Recipient {
-    "email": "3@test.com",
+    "raw": Object {
+      "email": "3@test.com",
+    },
   },
   Recipient {
-    "email": "4@test.com",
+    "raw": Object {
+      "email": "4@test.com",
+    },
   },
   Recipient {
-    "email": "5@test.com",
+    "raw": Object {
+      "email": "5@test.com",
+    },
   },
   Recipient {
-    "email": "6@test.com",
+    "raw": Object {
+      "email": "6@test.com",
+    },
   },
   Recipient {
-    "email": "7@test.com",
+    "raw": Object {
+      "email": "7@test.com",
+    },
   },
   Recipient {
-    "email": "8@test.com",
+    "raw": Object {
+      "email": "8@test.com",
+    },
   },
   Recipient {
-    "email": "9@test.com",
+    "raw": Object {
+      "email": "9@test.com",
+    },
   },
 ]
 `;
@@ -105,7 +129,9 @@ exports[`send many emails 6`] = `"a@b.com"`;
 exports[`send many emails 7`] = `
 Array [
   Recipient {
-    "email": "10@test.com",
+    "raw": Object {
+      "email": "10@test.com",
+    },
   },
 ]
 `;

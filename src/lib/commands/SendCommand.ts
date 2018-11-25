@@ -51,7 +51,7 @@ export class SendCommand extends ExistingNewsLetterCommand {
         for (const { recipient, status } of result.failed()) {
           console.log(
             chalk.red(
-              `= ${recipient.getEmail()} ${status.status} ${status.error}`,
+              `- ${recipient.getEmail()} ${status.status} ${status.error}`,
             ),
           );
         }

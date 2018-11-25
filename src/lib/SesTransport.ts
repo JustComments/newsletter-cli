@@ -1,13 +1,16 @@
 import * as aws from "aws-sdk";
+import * as Handlebars from "handlebars";
 import { SendResult } from "./SendResult";
 
 process.env.AWS_SDK_LOAD_CONFIG = "1";
 
 export class SesTransport {
   private ses: aws.SES;
+  private templates: Handlebars.TemplateDelegate[];
 
   constructor() {
     this.ses = new aws.SES();
+    this.templates = [];
   }
 
   public async getSendRate(): Promise<number> {
@@ -30,6 +33,21 @@ export class SesTransport {
       TemplateName: template.name,
       TextPart: template.text,
     };
+    this.templates.push(
+      Handlebars.compile(template.subject, {
+        strict: true,
+      }),
+    );
+    this.templates.push(
+      Handlebars.compile(template.text, {
+        strict: true,
+      }),
+    );
+    this.templates.push(
+      Handlebars.compile(template.html, {
+        strict: true,
+      }),
+    );
     try {
       await this.ses
         .createTemplate({
@@ -57,6 +75,7 @@ export class SesTransport {
       const req = {
         DefaultTemplateData: "{}",
         Destinations: recipients.map((r) => {
+          this.validateTemplate(r);
           return {
             Destination: {
               BccAddresses: [],
@@ -90,6 +109,16 @@ export class SesTransport {
         }),
         recipients,
       );
+    }
+  }
+
+  private validateTemplate(r: IRecipient) {
+    try {
+      for (const tmpl of this.templates) {
+        tmpl(r.getVariables());
+      }
+    } catch (err) {
+      throw err;
     }
   }
 }

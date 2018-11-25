@@ -56,19 +56,29 @@ test("iterate recipients", () => {
   expect(next5).toMatchInlineSnapshot(`
 Array [
   Recipient {
-    "email": "0@test.com",
+    "raw": Object {
+      "email": "0@test.com",
+    },
   },
   Recipient {
-    "email": "1@test.com",
+    "raw": Object {
+      "email": "1@test.com",
+    },
   },
   Recipient {
-    "email": "2@test.com",
+    "raw": Object {
+      "email": "2@test.com",
+    },
   },
   Recipient {
-    "email": "3@test.com",
+    "raw": Object {
+      "email": "3@test.com",
+    },
   },
   Recipient {
-    "email": "4@test.com",
+    "raw": Object {
+      "email": "4@test.com",
+    },
   },
 ]
 `);
@@ -79,19 +89,29 @@ Array [
   expect(another5).toMatchInlineSnapshot(`
 Array [
   Recipient {
-    "email": "5@test.com",
+    "raw": Object {
+      "email": "5@test.com",
+    },
   },
   Recipient {
-    "email": "6@test.com",
+    "raw": Object {
+      "email": "6@test.com",
+    },
   },
   Recipient {
-    "email": "7@test.com",
+    "raw": Object {
+      "email": "7@test.com",
+    },
   },
   Recipient {
-    "email": "8@test.com",
+    "raw": Object {
+      "email": "8@test.com",
+    },
   },
   Recipient {
-    "email": "9@test.com",
+    "raw": Object {
+      "email": "9@test.com",
+    },
   },
 ]
 `);
@@ -102,7 +122,9 @@ Array [
   expect(another1).toMatchInlineSnapshot(`
 Array [
   Recipient {
-    "email": "10@test.com",
+    "raw": Object {
+      "email": "10@test.com",
+    },
   },
 ]
 `);
