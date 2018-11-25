@@ -51,6 +51,8 @@ subject: Subject of your awesome newsletter!
 styles: ${require.resolve("github-markdown-css")}
 ---
 
+Hi {{name}}!
+
 Here goes the text of your awesome newsletter!
 `,
       "utf8",

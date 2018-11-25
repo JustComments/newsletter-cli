@@ -45,6 +45,30 @@ npm i newsletter-cli -g
     The column named 'email' must be present in the file
 - `<from-email>` is the email address which will appear as the sender of the newsletter.
 
+## Using variables in the template
+
+You can use variables in the templates as supported by [AWS SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html). The variables can be used in the subject and inside the body:
+
+```
+---
+subject: Hi {{name}}! Subject of your awesome newsletter!
+---
+
+Hi {{name}}!
+
+Here goes the text of your awesome newsletter!
+```
+
+Unfortunately, if the template rendering fails, AWS SES does not return an error. To detect rendering errors, you will need to subscribe to an SNS topics as described [here](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html).
+
+The reasons why template rendering can fail:
+
+- missing variables
+- typos in variable names
+- invalid template expressions
+
+The CLI tries to validate as much as possible but it's still recommended to set up a recovery mechanism for the rendering failures.
+
 ## Get Help
 
 [Open an issue](https://github.com/orkon/newsletter-cli/issues)

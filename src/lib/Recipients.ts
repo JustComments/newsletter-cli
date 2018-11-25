@@ -26,6 +26,7 @@ export class Recipients {
     const rawRecipients = csvparse(this.data, {
       columns: true,
       skip_empty_lines: true,
+      trim: true,
     });
     return rawRecipients.map((r: any) => new Recipient(r));
   }

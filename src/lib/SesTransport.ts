@@ -54,24 +54,22 @@ export class SesTransport {
     templateName: string,
   ) {
     try {
-      const result = await this.ses
-        .sendBulkTemplatedEmail({
-          DefaultTemplateData: "{}",
-          Destinations: recipients.map((r) => {
-            return {
-              Destination: {
-                BccAddresses: [],
-                CcAddresses: [],
-                ToAddresses: [r.getEmail()],
-              },
-              ReplacementTemplateData: "{}",
-            };
-          }),
-          Source: source,
-          Template: templateName,
-        })
-        .promise();
-
+      const req = {
+        DefaultTemplateData: "{}",
+        Destinations: recipients.map((r) => {
+          return {
+            Destination: {
+              BccAddresses: [],
+              CcAddresses: [],
+              ToAddresses: [r.getEmail()],
+            },
+            ReplacementTemplateData: JSON.stringify(r.getVariables()),
+          };
+        }),
+        Source: source,
+        Template: templateName,
+      };
+      const result = await this.ses.sendBulkTemplatedEmail(req).promise();
       return new SendResult(
         result.Status.map((item) => {
           return {
@@ -98,4 +96,5 @@ export class SesTransport {
 
 interface IRecipient {
   getEmail(): string;
+  getVariables(): { [key: string]: any };
 }
