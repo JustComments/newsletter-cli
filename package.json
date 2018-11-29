@@ -49,7 +49,7 @@
     "typescript": "3.2.1"
   },
   "dependencies": {
-    "aws-sdk": "2.366.0",
+    "aws-sdk": "2.367.0",
     "chalk": "2.4.1",
     "csv-parse": "4.0.1",
     "figlet": "1.2.1",
