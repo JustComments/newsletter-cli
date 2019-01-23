@@ -32,7 +32,7 @@
   "homepage": "https://github.com/orkon/newsletter-cli#readme",
   "devDependencies": {
     "@types/figlet": "1.2.0",
-    "@types/handlebars": "4.0.39",
+    "@types/handlebars": "4.0.40",
     "@types/inquirer": "0.0.43",
     "@types/jest": "23.3.10",
     "@types/marked": "0.4.2",
