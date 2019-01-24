@@ -58,7 +58,7 @@
     "handlebars": "4.0.12",
     "inquirer": "6.2.1",
     "isemail": "3.2.0",
-    "juice": "5.0.1",
+    "juice": "5.1.0",
     "marked": "0.5.2",
     "opn": "5.4.0",
     "ora": "3.0.0",
