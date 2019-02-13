@@ -54,7 +54,7 @@
     "csv-parse": "4.3.3",
     "figlet": "1.2.1",
     "front-matter": "3.0.1",
-    "github-markdown-css": "2.10.0",
+    "github-markdown-css": "3.0.1",
     "handlebars": "4.1.0",
     "inquirer": "6.2.2",
     "isemail": "3.2.0",
