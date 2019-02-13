@@ -34,7 +34,7 @@
     "@types/figlet": "1.2.0",
     "@types/handlebars": "4.0.40",
     "@types/inquirer": "0.0.43",
-    "@types/jest": "23.3.13",
+    "@types/jest": "24.0.4",
     "@types/marked": "0.6.0",
     "@types/node": "10.12.20",
     "@types/opn": "5.1.0",
