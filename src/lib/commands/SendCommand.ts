@@ -2,7 +2,7 @@ import chalk from "chalk";
 import * as fs from "fs";
 import * as inquirer from "inquirer";
 import * as ismail from "isemail";
-import Ora = require("ora");
+import * as Ora from "ora";
 import { Recipients } from "../Recipients";
 import { Sender } from "../Sender";
 import { SesTransport } from "../SesTransport";
@@ -25,7 +25,7 @@ export class SendCommand extends ExistingNewsLetterCommand {
 
   public async run() {
     if (await this.ready()) {
-      const spinner = new Ora({
+      const spinner = Ora({
         color: "green",
         text: `Sending emails 0/${this.recipients.count()}`,
       }).start();
