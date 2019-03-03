@@ -21,7 +21,7 @@
 
 Prepare your AWS SES account and configure access to AWS on your machine:
 
- - https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sign-up-for-aws.html) 
+ - https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sign-up-for-aws.html
  - https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html
 
 ## Getting Started
