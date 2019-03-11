@@ -50,7 +50,7 @@
   "dependencies": {
     "aws-sdk": "2.418.0",
     "chalk": "2.4.2",
-    "csv-parse": "4.3.3",
+    "csv-parse": "4.3.4",
     "figlet": "1.2.1",
     "front-matter": "3.0.1",
     "github-markdown-css": "3.0.1",
