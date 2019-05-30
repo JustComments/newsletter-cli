@@ -1,4 +1,5 @@
 {
   "assignees": ["OrKoN"],
-  "extends": ["config:base"]
+  "extends": ["config:base"],
+  "group": "all"
 }
