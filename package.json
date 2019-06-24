@@ -40,7 +40,7 @@
     "@types/ora": "3.1.0",
     "@types/remove-markdown": "0.1.1",
     "depcheck": "0.8.1",
-    "husky": "2.4.1",
+    "husky": "2.5.0",
     "jest": "24.8.0",
     "prettier": "1.18.2",
     "ts-jest": "24.0.2",
@@ -48,7 +48,7 @@
     "typescript": "3.5.2"
   },
   "dependencies": {
-    "aws-sdk": "2.480.0",
+    "aws-sdk": "2.481.0",
     "chalk": "2.4.2",
     "csv-parse": "4.4.3",
     "figlet": "1.2.3",
