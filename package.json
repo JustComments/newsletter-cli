@@ -35,20 +35,20 @@
     "@types/inquirer": "6.0.3",
     "@types/jest": "24.0.15",
     "@types/marked": "0.6.5",
-    "@types/node": "11.13.15",
+    "@types/node": "11.13.17",
     "@types/opn": "5.1.0",
     "@types/ora": "3.1.0",
     "@types/remove-markdown": "0.1.1",
-    "depcheck": "0.8.1",
+    "depcheck": "0.8.3",
     "husky": "3.0.0",
     "jest": "24.8.0",
     "prettier": "1.18.2",
     "ts-jest": "24.0.2",
     "tslint": "5.18.0",
-    "typescript": "3.5.2"
+    "typescript": "3.5.3"
   },
   "dependencies": {
-    "aws-sdk": "2.481.0",
+    "aws-sdk": "2.489.0",
     "chalk": "2.4.2",
     "csv-parse": "4.4.3",
     "figlet": "1.2.3",
@@ -58,7 +58,7 @@
     "inquirer": "6.4.1",
     "isemail": "3.2.0",
     "juice": "5.2.0",
-    "marked": "0.6.2",
+    "marked": "0.7.0",
     "opn": "5.5.0",
     "ora": "3.4.0",
     "remove-markdown": "0.3.0"
