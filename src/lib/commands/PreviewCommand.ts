@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import * as fs from "fs";
-import opn = require("opn");
+import open = require("open");
 import * as os from "os";
 import * as path from "path";
 import { ExistingNewsLetterCommand } from "./ExistingNewsletterCommand";
@@ -8,7 +8,7 @@ import { ExistingNewsLetterCommand } from "./ExistingNewsletterCommand";
 export class PreviewCommand extends ExistingNewsLetterCommand {
   public async run() {
     const previewFilePath = await this.createPreviewFile();
-    opn(previewFilePath);
+    open(previewFilePath);
     console.log(
       chalk.green(`= Opened ${this.newsletter.getFilePath()} in your browser`),
     );
