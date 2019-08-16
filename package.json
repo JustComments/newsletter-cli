@@ -39,7 +39,7 @@
     "@types/remove-markdown": "0.1.1",
     "depcheck": "0.8.3",
     "husky": "3.0.2",
-    "jest": "24.8.0",
+    "jest": "24.9.0",
     "open": "6.4.0",
     "prettier": "1.18.2",
     "ts-jest": "24.0.2",
