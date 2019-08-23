@@ -12,7 +12,7 @@ export class PrepareCommand {
       type: "input",
       validate: () => true,
     };
-    const { name } = await inquirer.prompt(question);
+    const { name } = await inquirer.prompt([question]);
     const newsletter = new Newsletter(name);
     if (newsletter.exists()) {
       throw new Error(

@@ -74,7 +74,7 @@ export class SendCommand extends ExistingNewsLetterCommand {
       name: "ready",
       type: "confirm",
     };
-    const { ready } = await inquirer.prompt(question);
+    const { ready } = await inquirer.prompt([question]);
     return ready;
   }
 
