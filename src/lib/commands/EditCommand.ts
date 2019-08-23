@@ -4,7 +4,7 @@ import { ExistingNewsLetterCommand } from "./ExistingNewsletterCommand";
 
 export class EditCommand extends ExistingNewsLetterCommand {
   public async run() {
-    open(this.newsletter.getFilePath());
+    await open(this.newsletter.getFilePath());
     console.log(
       chalk.green(`= Opened ${this.newsletter.getFilePath()} in your editor`),
     );

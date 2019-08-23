@@ -8,7 +8,7 @@ import { ExistingNewsLetterCommand } from "./ExistingNewsletterCommand";
 export class PreviewCommand extends ExistingNewsLetterCommand {
   public async run() {
     const previewFilePath = await this.createPreviewFile();
-    open(previewFilePath);
+    await open(previewFilePath);
     console.log(
       chalk.green(`= Opened ${this.newsletter.getFilePath()} in your browser`),
     );
