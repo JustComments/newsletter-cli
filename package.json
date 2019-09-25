@@ -1,6 +1,6 @@
 {
   "name": "newsletter-cli",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Easy CLI to send newsletters from your machine",
   "bin": {
     "newsletter": "dist/index.js"
