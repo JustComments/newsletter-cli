@@ -35,7 +35,7 @@
     "@types/inquirer": "6.5.0",
     "@types/jest": "24.0.18",
     "@types/marked": "0.6.5",
-    "@types/node": "12.7.10",
+    "@types/node": "12.7.11",
     "@types/remove-markdown": "0.1.1",
     "depcheck": "0.8.3",
     "husky": "3.0.8",
@@ -47,9 +47,9 @@
     "typescript": "3.6.3"
   },
   "dependencies": {
-    "aws-sdk": "2.541.0",
+    "aws-sdk": "2.543.0",
     "chalk": "2.4.2",
-    "csv-parse": "4.4.7",
+    "csv-parse": "4.6.1",
     "figlet": "1.2.4",
     "front-matter": "3.0.2",
     "github-markdown-css": "3.0.1",
