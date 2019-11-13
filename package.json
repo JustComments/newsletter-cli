@@ -33,8 +33,8 @@
   "devDependencies": {
     "@types/figlet": "1.2.0",
     "@types/inquirer": "6.5.0",
-    "@types/jest": "24.0.22",
-    "@types/marked": "0.7.0",
+    "@types/jest": "24.0.23",
+    "@types/marked": "0.7.1",
     "@types/node": "12.12.7",
     "@types/remove-markdown": "0.1.1",
     "depcheck": "0.9.1",
@@ -47,18 +47,18 @@
     "typescript": "3.7.2"
   },
   "dependencies": {
-    "aws-sdk": "2.569.0",
+    "aws-sdk": "2.571.0",
     "chalk": "2.4.2",
     "csv-parse": "4.6.5",
     "figlet": "1.2.4",
     "front-matter": "3.0.2",
     "github-markdown-css": "3.0.1",
-    "handlebars": "4.5.1",
+    "handlebars": "4.5.2",
     "inquirer": "7.0.0",
     "isemail": "3.2.0",
     "juice": "5.2.0",
     "marked": "0.7.0",
-    "ora": "4.0.2",
+    "ora": "4.0.3",
     "remove-markdown": "0.3.0"
   },
   "files": [
