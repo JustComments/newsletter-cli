@@ -4,6 +4,8 @@ import { EditCommand } from "./commands/EditCommand";
 import { PrepareCommand } from "./commands/PrepareCommand";
 import { PreviewCommand } from "./commands/PreviewCommand";
 import { SendCommand } from "./commands/SendCommand";
+import { UserConfig } from "./UserConfig";
+const userConfigObj: UserConfig = new UserConfig();
 
 export async function run() {
   const [, , command, name, recipientsCsv, source] = process.argv;
@@ -25,10 +27,12 @@ export async function run() {
         break;
 
       case "send":
+        const userConfig: any = userConfigObj.load();
+        const sourceWithFallback = source || userConfig.source_default;
         requireName(name);
         requireRecipientsCsv(recipientsCsv);
-        requireSource(source);
-        await new SendCommand(name, recipientsCsv, source).run();
+        requireSource(sourceWithFallback);
+        await new SendCommand(name, recipientsCsv, sourceWithFallback).run();
         break;
 
       case "help":
