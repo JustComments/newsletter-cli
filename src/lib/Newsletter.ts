@@ -3,6 +3,9 @@ import * as fs from "fs";
 import juice = require("juice");
 import * as marked from "marked";
 import rmm = require("remove-markdown");
+import { UserConfig } from "./UserConfig";
+const userConfigObj: UserConfig = new UserConfig();
+const userConfig: any = userConfigObj.load();
 
 type FrontMatter = typeof fm.default;
 
@@ -46,16 +49,20 @@ export class Newsletter {
   }
 
   public writeTemplate() {
+    const subject = userConfig.template_subject ? userConfig.template_subject : "Subject of your awesome newsletter!";
+    const styles = userConfig.template_css ? userConfig.template_css : require.resolve("github-markdown-css");
+    const body = userConfig.template_body ? userConfig.template_body : `Hi {{name}}!
+
+Here goes the text of your awesome newsletter!`;
+
     fs.writeFileSync(
       this.filePath,
       `---
-subject: Subject of your awesome newsletter!
-styles: ${require.resolve("github-markdown-css")}
+subject: ${subject}
+styles: ${styles}
 ---
 
-Hi {{name}}!
-
-Here goes the text of your awesome newsletter!
+${body}
 `,
       "utf8",
     );
