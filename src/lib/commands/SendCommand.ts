@@ -10,6 +10,15 @@ import {UserConfig} from "../UserConfig";
 import { ExistingNewsLetterCommand } from "./ExistingNewsletterCommand";
 
 export class SendCommand extends ExistingNewsLetterCommand {
+
+  public static extractEmail(email: string) : string {
+    const emailMatcher = new RegExp("^.*<(.+)>$");
+    const parts = email.match(emailMatcher);
+    if (parts) {
+      email = parts[1];
+    }
+    return email;
+  }
   private sender: Sender;
   private recipients: Recipients;
   private source: string;
@@ -80,8 +89,9 @@ export class SendCommand extends ExistingNewsLetterCommand {
   }
 
   private validateSource() {
-    if (!ismail.validate(this.source)) {
-      throw new Error(`Sender's email address "${this.source}: is not valid`);
+    const email = SendCommand.extractEmail(this.source);
+    if (!ismail.validate(email)) {
+      throw new Error(`Sender's email address "${email}: is not valid`);
     }
   }
 
