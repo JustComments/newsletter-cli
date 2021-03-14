@@ -7,6 +7,7 @@
   },
   "scripts": {
     "test": "jest",
+    "cli": "node dist/index.js",
     "prepublishOnly": "npm run lint && npm run depcheck && npm run compile",
     "compile": "npm run clean && tsc -p .",
     "watch": "tsc -w -p .",
