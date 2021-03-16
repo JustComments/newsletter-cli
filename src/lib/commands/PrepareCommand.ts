@@ -1,8 +1,14 @@
 import * as chalk from "chalk";
 import * as inquirer from "inquirer";
 import { Newsletter } from "../Newsletter";
+import {UserConfig} from "../UserConfig";
 
 export class PrepareCommand {
+  private userConfig: UserConfig;
+
+  constructor(userConfig: UserConfig) {
+    this.userConfig = userConfig;
+  }
   public async run() {
     const question: inquirer.Question<IAnswer> = {
       default: "NEWSLETTER_NAME",
@@ -13,7 +19,7 @@ export class PrepareCommand {
       validate: () => true,
     };
     const { name } = await inquirer.prompt([question]);
-    const newsletter = new Newsletter(name);
+    const newsletter = new Newsletter(name, this.userConfig);
     if (newsletter.exists()) {
       throw new Error(
         `Newsletter with name ${newsletter.getFilePath()} already exists`,

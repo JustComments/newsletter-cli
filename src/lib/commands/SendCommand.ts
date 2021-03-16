@@ -6,6 +6,7 @@ import * as Ora from "ora";
 import { Recipients } from "../Recipients";
 import { Sender } from "../Sender";
 import { SesTransport } from "../SesTransport";
+import {UserConfig} from "../UserConfig";
 import { ExistingNewsLetterCommand } from "./ExistingNewsletterCommand";
 
 export class SendCommand extends ExistingNewsLetterCommand {
@@ -14,10 +15,10 @@ export class SendCommand extends ExistingNewsLetterCommand {
   private source: string;
   private recipientsCsv: string;
 
-  constructor(name: string, recipientsCsv: string, source: string) {
-    super(name);
+  constructor(name: string, recipientsCsv: string, source: string, userConfig: UserConfig) {
+    super(name, userConfig);
     this.recipientsCsv = recipientsCsv;
-    this.sender = new Sender(this.newsletter, new SesTransport());
+    this.sender = new Sender(this.newsletter, new SesTransport(userConfig));
     this.recipients = new Recipients(this.readCsvFile());
     this.source = source;
     this.validateSource();
