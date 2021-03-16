@@ -1,16 +1,19 @@
 import * as aws from "aws-sdk";
 import * as Handlebars from "handlebars";
 import { SendResult } from "./SendResult";
+import { UserConfig } from "./UserConfig";
 
 process.env.AWS_SDK_LOAD_CONFIG = "1";
 
 export class SesTransport {
   private ses: aws.SES;
   private templates: Handlebars.TemplateDelegate[];
+  private userConfig: UserConfig;
 
-  constructor() {
+  constructor(userConfig: UserConfig) {
     this.ses = new aws.SES();
     this.templates = [];
+    this.userConfig = userConfig;
   }
 
   public async getSendRate(): Promise<number> {
@@ -88,7 +91,8 @@ export class SesTransport {
         Source: source,
         Template: templateName,
       };
-      const result = await this.ses.sendBulkTemplatedEmail(req).promise();
+      const mergedReq = Object.assign({}, req, this.userConfig.getSesSendConfiguration() || {});
+      const result = await this.ses.sendBulkTemplatedEmail(mergedReq).promise();
       return new SendResult(
         result.Status.map((item) => {
           return {

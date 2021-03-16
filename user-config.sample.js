@@ -24,6 +24,14 @@ config.template_body = template_data;
 // Default source email.
 config.source_default = "noreply@example.com"
 
+/**
+ * These customizations alter the SES transport.
+ */
+// Merge into request object for sending.
+config.ses_send_configuration = {
+  ConfigurationSetName: "bulk-send",
+}
+
 /***** END *****/
 // Following lines are always needed.
 var module = module || {};

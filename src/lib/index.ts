@@ -13,26 +13,28 @@ export async function run() {
   try {
     switch (command) {
       case "prepare":
-        await new PrepareCommand().run();
+        await new PrepareCommand(userConfigObj).run();
         break;
 
       case "preview":
         requireName(name);
-        await new PreviewCommand(name).run();
+        await new PreviewCommand(name, userConfigObj).run();
         break;
 
       case "edit":
         requireName(name);
-        await new EditCommand(name).run();
+        await new EditCommand(name, userConfigObj).run();
         break;
 
       case "send":
-        const userConfig: any = userConfigObj.load();
-        const sourceWithFallback = source || userConfig.source_default;
+        let sourceWithFallback = source;
+        if (!sourceWithFallback) {
+          sourceWithFallback = userConfigObj.getSourceDefault()!;
+        }
         requireName(name);
         requireRecipientsCsv(recipientsCsv);
         requireSource(sourceWithFallback);
-        await new SendCommand(name, recipientsCsv, sourceWithFallback).run();
+        await new SendCommand(name, recipientsCsv, sourceWithFallback, userConfigObj).run();
         break;
 
       case "help":
