@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import * as chalk from "chalk";
 import open = require("open");
 import { ExistingNewsLetterCommand } from "./ExistingNewsletterCommand";
 

@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import * as chalk from "chalk";
 import * as figlet from "figlet";
 import { EditCommand } from "./commands/EditCommand";
 import { PrepareCommand } from "./commands/PrepareCommand";

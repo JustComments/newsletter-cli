@@ -1,8 +1,10 @@
-import * as fm from "front-matter";
+import fm = require("front-matter");
 import * as fs from "fs";
 import juice = require("juice");
 import * as marked from "marked";
 import rmm = require("remove-markdown");
+
+type FrontMatter = typeof fm.default;
 
 export class Newsletter {
   private name: string;
@@ -24,7 +26,7 @@ export class Newsletter {
     text: string;
   } {
     const markdown = fs.readFileSync(this.filePath, "utf8");
-    const { body, attributes } = fm<IFrontMatterAttributes>(markdown);
+    const { body, attributes } = ((fm as any) as FrontMatter)<IFrontMatterAttributes>(markdown);
     const { subject, styles } = attributes;
     const css = styles ? fs.readFileSync(styles, "utf8") : "";
     const html = `<html>
