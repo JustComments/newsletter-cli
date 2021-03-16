@@ -71,6 +71,10 @@ The reasons why template rendering can fail:
 
 The CLI tries to validate as much as possible but it's still recommended to set up a recovery mechanism for the rendering failures.
 
+## User configuration file
+
+An optional user configuration file can be placed at `${HOME}/.newsletter-cli/config.js`, which allows certain customizations. The [sample user configuration](user-config.sample.js) is commented with the possible customizations.
+
 ## Get Help
 
 [Open an issue](https://github.com/orkon/newsletter-cli/issues)
