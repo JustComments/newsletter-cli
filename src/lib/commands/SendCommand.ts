@@ -11,7 +11,7 @@ import { ExistingNewsLetterCommand } from "./ExistingNewsletterCommand";
 
 export class SendCommand extends ExistingNewsLetterCommand {
 
-  public static extractEmail(email: string) : string {
+  public static extractEmail(email: string): string {
     const emailMatcher = new RegExp("^.*<(.+)>$");
     const parts = email.match(emailMatcher);
     if (parts) {
