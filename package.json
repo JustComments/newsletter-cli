@@ -57,7 +57,7 @@
     "inquirer": "8.0.0",
     "isemail": "3.2.0",
     "juice": "7.0.0",
-    "marked": "2.0.1",
+    "marked": "4.0.10",
     "open": "^8.0.2",
     "ora": "5.3.0",
     "remove-markdown": "0.3.0"
